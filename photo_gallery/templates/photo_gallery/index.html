@@ -1,0 +1,23 @@
+{% extends 'photo_gallery/base.html' %}
+
+{% block content %}
+<!--h1>{{ title }}</h1-->
+<ul class="list-articles">
+    {% for p in posts %}
+        <li><div class="article-panel">
+        <p class="first">{{p.cat_title}}</p>
+        </div></li>
+
+    {% if p.photo %}
+        <!--p><img class="img-article-left thump" src="{{p.photo.url}}"></p-->
+
+        <li><div class="article-empty">
+
+          <p><a href="{{ p.get_absolute_url }}"><img class={{class}} src="{{p.photo.url}}"></a>
+           </p> </div></li>
+    {% endif %}
+<hr>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

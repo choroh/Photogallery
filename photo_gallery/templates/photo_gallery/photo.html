@@ -1,0 +1,10 @@
+{% extends 'photo_gallery/base.html' %}
+
+{% block content %}
+<h4>{{post.title}}</h4>
+
+{% if post.photo %}
+<p><img class="img-full" src="{{post.photo.url}}"></p>
+{% endif %}
+
+{% endblock %}
