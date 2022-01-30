@@ -12,7 +12,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 class GalleryAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title', 'description', 'photo', 'ico', 'time_create', 'is_published', 'cat_title')
+    list_display = ('id', 'title', 'description', 'photo', 'time_create', 'is_published', 'cat_title')
     list_display_links = ('title', 'description')
     search_fields = ('title', 'description')
     #prepopulated_fields = {"slug": ("title",)}  # автоматически заполнять слаг на основе названия
